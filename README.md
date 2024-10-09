@@ -1,5 +1,6 @@
 # MUID
 This repository contains the experiments done in the work: "Wang L, Yang X, Zhou S, et al. MUID: Multi-person Gait Identification with Commodity Wi-Fi."
+
 The test data and training model can be download in https://drive.google.com/.
 
 The code for the signal processing section, including ACF-based speed extraction, Doppler spectrum calibration and TAC information extraction, is placed in the file of Processing.
