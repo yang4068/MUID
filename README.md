@@ -1,7 +1,7 @@
 # MUID
 This repository contains the experiments done in the work: "Wang L, Yang X, Zhou S, et al. MUID: Multi-person Gait Identification with Commodity Wi-Fi."
 
-The part of train and test data can be download in [https://drive.google.com/drive/folders/1IIdgjjJgNNk3DWh6Q30SqmAxXK-zW-vp?usp=drive_link](https://drive.google.com/drive/folders/1IIdgjjJgNNk3DWh6Q30SqmAxXK-zW-vp?usp=drive_link). And the rest of data can be download in [[https://www.alipan.com/s/YWgKZmgFrV8](https://pan.baidu.com/s/1ve_xykl-gRpE_YXmVKKhsQ?pwd=n60x)]
+The part of train and test data can be download in [https://drive.google.com/drive/folders/1IIdgjjJgNNk3DWh6Q30SqmAxXK-zW-vp?usp=drive_link](https://drive.google.com/drive/folders/1IIdgjjJgNNk3DWh6Q30SqmAxXK-zW-vp?usp=drive_link). And the rest of data can be download in [https://pan.baidu.com/s/1ve_xykl-gRpE_YXmVKKhsQ?pwd=n60x](https://pan.baidu.com/s/1ve_xykl-gRpE_YXmVKKhsQ?pwd=n60x)
 
 The code for the signal processing section, including ACF-based speed extraction, Doppler spectrum calibration and TAC information extraction, is placed in the file of Processing.
 
