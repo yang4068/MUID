@@ -7,4 +7,4 @@ The code for the signal processing section, including ACF-based speed extraction
 
 The code for the two-branch feature fusion identification network is placed in the file of Identification. You can run it to show the overall identification performance in 2-person and 3-person cases.
 
-In addition, we also put the folders: Baseline, including the multi-person identification method (magauth) and the single-person identification methods (wifiu and gaitway). 
+In addition, we also put the folders: Baseline, including the multi-person identification method (Magauth) and the single-person identification methods (WifiU and Gaitway). 
