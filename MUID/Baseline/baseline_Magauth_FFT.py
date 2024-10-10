@@ -75,13 +75,10 @@ def avg_CSI_Matrix(CSI_Matrix):
 
 
 def calculate_cmov(csi_pca):
-    # 共轭相乘，计算信号的平方幅值
     conjugate_product = np.multiply(csi_pca, np.conjugate(csi_pca))
     power_spectrum = np.abs(conjugate_product)
-    # 在时间维度上取平均值
     average_spectrum = np.mean(power_spectrum, axis=1)
     cavg_matrix = np.tile(average_spectrum[:, np.newaxis], (1, power_spectrum.shape[1]))
-    # 将二维矩阵减去平均值
     cmov_matrix = power_spectrum - cavg_matrix
     return cmov_matrix
 
@@ -219,16 +216,16 @@ def AoA_track(AoA_list):
             ndt, nft, nnt = 0, 0, 0
             visParent = set()
             for parent, measure in zip(situation, measures):
-                if parent == 0:  # 来源于虚警
+                if parent == 0:  
                     nft += 1
                     prob *= 1 / V
-                elif parent <= nngt:  # 来源于已知
+                elif parent <= nngt: 
                     ndt += 1
                     prob *= newHyp.tracks[parent - 1].estimateP(MeasurePoint(measure))  # N(z-Hx_;0,H.P_.H^T+R)
                     # print('P=',newHyp.tracks[parent-1].estimateP(MeasurePoint(measure[0])))
                     newHyp.tracks[parent - 1].AddPoint(MeasurePoint(measure))  # update P ,并添加到trackpoint里
                     visParent.add(parent - 1)
-                else:  # 来源于新目标
+                else: 
                     nnt += 1
                     prob *= 1 / V
                     newHyp.tracks.append(newTracks[parent - len(hyp.tracks) - 1])
@@ -236,7 +233,7 @@ def AoA_track(AoA_list):
             assert nngt >= ndt
             newHyp.prob = pow(pd, ndt) * pow(1 - pd, nngt - ndt) * pow(betaFT, nft) * pow(betaNT, nnt) * prob * hyp.prob
 
-            ############ Not applicable to this scenario #########
+           
             # print('hyp.prob={0},newHyp.prob={1},prob={2}'.format(hyp.prob,newHyp.prob,prob))
             # for i,track in enumerate(newHyp.tracks):
             #     if i not in visParent:
@@ -266,7 +263,7 @@ def AoA_track(AoA_list):
             print('---------')
             print('Frame{}:'.format(i))
         newTracks = []
-        for measure in measures:  # 对该时刻的所有测量建立轨迹，并添加到newtracks中
+        for measure in measures:  #
             newTracks.append(Track(MeasurePoint(measure), T, idTrack))
             xori.append(i)
             yori.append(measure)
